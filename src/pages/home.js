@@ -2,6 +2,8 @@ import React from 'react';
 import '../assets/css/application.css';
 import {dotsMovement} from '../assets/js/dots.js';
 import {scrollBG} from '../assets/js/colorChanger.js';
+import quest from '../assets/images/quest.png'
+import daedalus from '../assets/images/daedalus.png'
 import anime from '../assets/anime/lib/anime.es.js'
 
 
@@ -101,14 +103,14 @@ class Home extends React.Component {
 									<div className="col-6 col-md-4 col-lg-3">
 										<div className="card">
 											<a href="https://quest.devicarus.com" target="_blank" > 
-												<img className="image" src="../../assets/images/quest.png" />
+												<img className="image" src={quest} />
 											</a>
 										</div>
 									</div>
 									<div className="col-6 col-md-4 col-lg-3">
 										<div className="card">
 											<a href="https://daedalus.devicarus.com" target="_blank" > 
-												<img className="image" src="/src/assets/images/daedalus.png" />
+												<img className="image" src={daedalus} />
 											</a>
 										</div>
 									</div>
