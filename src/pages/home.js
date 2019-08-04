@@ -49,8 +49,8 @@ class Home extends React.Component {
 										</h2>
 										<div className="d-flex flex-column flex-md-row justify-content-between align-items-around">
 											<div className="my-4 col-12 dark">
-												<a className="btn btn-lg btn-purple" href="contactUs.html">Contact Us</a>
-												<a className="btn btn-lg btn-purple-basic disabled" href="getQuote.html">Get Quote</a>
+												<a className="btn btn-lg btn-purple" href="/contact-us">Contact Us</a>
+												<a className="btn btn-lg btn-purple-basic disabled" href="/getQuote">Get Quote</a>
 											</div>
 										</div>
 									</div>
@@ -102,14 +102,14 @@ class Home extends React.Component {
 									<div className="col-md-4 d-lg-none"></div>
 		
 									<div className="col-6 col-md-4 col-lg-3">
-										<div className="card">
+										<div className="card hover">
 											<a href="https://quest.devicarus.com" target="_blank" > 
 												<img className="image" src={quest} />
 											</a>
 										</div>
 									</div>
 									<div className="col-6 col-md-4 col-lg-3">
-										<div className="card">
+										<div className="card hover">
 											<a href="https://daedalus.devicarus.com" target="_blank" > 
 												<img className="image" src={daedalus} />
 											</a>

@@ -62,11 +62,12 @@ code {
 .text-purp {
   color: #A632C2;
 }
-.card:hover{
+.hover.card:hover{
   width: 105%;
   transition: .4s;
 
 }
+
 .btn-purple-basic:hover {
   background-color: #fff;
   transition: .5s transform;

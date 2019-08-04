@@ -1,6 +1,6 @@
 import anime from '../anime/lib/anime.es.js';
 
-var animateBG = (el, colors, t) =>{
+export var animateBG = (el, colors, t) =>{
     let animation = [];
     for (let i = 0; i < colors.length; i++){
         let j = i + 1
