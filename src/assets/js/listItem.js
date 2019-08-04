@@ -1,9 +1,6 @@
+import anime from '../anime/lib/anime.es.js';
 
-
-
-
-
-let animateLI = () =>{
+export let animateLI = () =>{
   let top = document.querySelector(".top-throbber").getBoundingClientRect(),
       start = document.querySelector(".mid-throbber").getBoundingClientRect(),
       end1 = document.querySelector(".pulse3").getBoundingClientRect(),
@@ -154,4 +151,3 @@ let animateLI = () =>{
     return animation
 
 }
-animateLI()

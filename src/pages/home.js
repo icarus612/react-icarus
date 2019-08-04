@@ -2,10 +2,10 @@ import React from 'react';
 import '../assets/css/application.css';
 import {dotsMovement} from '../assets/js/dots.js';
 import {scrollBG} from '../assets/js/colorChanger.js';
-import quest from '../assets/images/quest.png'
-import daedalus from '../assets/images/daedalus.png'
-import anime from '../assets/anime/lib/anime.es.js'
-
+import quest from '../assets/images/quest.png';
+import daedalus from '../assets/images/daedalus.png';
+import anime from '../assets/anime/lib/anime.es.js';
+import {animateLI} from '../assets/js/listItem.js';
 
 class Home extends React.Component {
 
@@ -30,7 +30,8 @@ class Home extends React.Component {
 
 		dotsMovement(dotsRTL, ["first", "second"], [-6, 360], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
 		dotsMovement(dotsLTR, ["third", "fourth"], [-6, 360], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
-		
+		animateLI()
+
 	}
 	render(){
 		return (
