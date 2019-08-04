@@ -1,3 +1,5 @@
+import anime from '../anime/lib/anime.es.js';
+
 var animateBG = (el, colors, t) =>{
     let animation = [];
     for (let i = 0; i < colors.length; i++){
@@ -16,7 +18,7 @@ var animateBG = (el, colors, t) =>{
     return animation[0].play()
     
 }
-var scrollBG = (el, colors, t) => {
+export var scrollBG = (el, colors, t) => {
     let animation = [];
     for (let i = 0; i < colors.length; i++){
         let j = i + 1
@@ -33,7 +35,7 @@ var scrollBG = (el, colors, t) => {
         let x = Math.floor(animation[animation.length-1].currentTime/t)
         let y = Math.floor(animation[animation.length-1].currentTime)
     
-        for (i = 0; i < animation.length; i++){
+        for (let i = 0; i < animation.length; i++){
             animation[i].seek((window.scrollY / t) * animation[i].duration);
         }
         return animation[x].seek((window.scrollY / t) * animation[animation.length-1].duration);
