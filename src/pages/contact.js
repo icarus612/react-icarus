@@ -1,8 +1,6 @@
 import React from 'react';
 import '../assets/css/application.css';
-import {dotsMovement} from '../assets/js/dots.js';
 import {animateBG} from '../assets/js/colorChanger.js';
-import anime from '../assets/anime/lib/anime.es.js';
 
 class Contact extends React.Component {
 
