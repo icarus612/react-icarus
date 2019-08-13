@@ -6,7 +6,10 @@ import quest from '../assets/images/quest.png';
 import daedalus from '../assets/images/daedalus.png';
 import anime from '../assets/anime/lib/anime.es.js';
 import {animateLI} from '../assets/js/listItem.js';
-
+import Throbber from './components/throbber.js';
+import Swoosh from './components/swoosh.js';
+import Button from './components/button.js';
+import {Link} from 'react-router-dom';
 class Home extends React.Component {
 
 	constructor(props){
@@ -49,8 +52,8 @@ class Home extends React.Component {
 										</h2>
 										<div className="d-flex flex-column flex-md-row justify-content-between align-items-around">
 											<div className="my-4 col-12 dark">
-												<a className="btn btn-lg btn-purple" href="/contact-us">Contact Us</a>
-												<a className="btn btn-lg btn-purple-basic disabled" href="/getQuote">Get Quote</a>
+												<Button simple size='lg' component={Link} to='/contact-us'>Contact Us</Button>
+												<a className="btn btn-lg " href="/get-quote">Get Quote</a>
 											</div>
 										</div>
 									</div>
@@ -62,25 +65,11 @@ class Home extends React.Component {
 							<div className="overflow-visible container">
 								<div className="d-flex flex-row flex-wrap align-items-center" id="containerCheck">
 									<div className="col-12">	
-										<div className="throbber-bottom" id="first">
-											<div className="throbber-inner"></div>
-										</div>
+										<Throbber bottom id="first" mobile="right" />
 									</div>
-			
-									<div className="col-12">
-										<div id="mv1">
-											<div className="dot"></div>
-											<div className="dot"></div>
-											<div className="dot"></div>
-											<div className="dot"></div>
-											<div className="dot"></div>
-										</div>
-									</div>
-			
+									<Swoosh id="mv1" startEl="first" endEl="second" />
 									<div className="col-12 col-md-8 col-lg-6">
-										<div className="throbber-top" id="second">
-											<div className="throbber-inner"></div>
-										</div>
+										<Throbber top id="second" mobile="left" />
 										<div className="purple-gradient d-flex flex-column p-5 text-left overflow-visible">
 											<h3 className="bold">
 												How we differ.
@@ -95,9 +84,8 @@ class Home extends React.Component {
 												Check out these animated demo landing pages.
 											</p>
 										</div>
-										<div className="throbber-bottom" id="third">
-											<div className="throbber-inner"></div>
-										</div>
+										<Throbber bottom id="third" mobile="left" />
+
 									</div>
 									<div className="col-md-4 d-lg-none"></div>
 		
@@ -115,20 +103,11 @@ class Home extends React.Component {
 											</a>
 										</div>
 									</div>
-		
-									<div className="col-12">
-										<div id="mv2">
-											<div className="dot"></div>
-											<div className="dot"></div>
-											<div className="dot"></div>
-											<div className="dot"></div>
-											<div className="dot"></div>
-										</div>						
-									</div>
+									<Swoosh id="mv2" startEl="third" endEl="fourth" />
+
 								</div>
-								<div className="throbber-top" id="fourth">
-									<div className="throbber-inner"></div>
-								</div>
+														<Throbber top id="fourth" mobile="right" />
+
 							</div>
 							
 						</section>
@@ -225,9 +204,9 @@ class Home extends React.Component {
 						</h3>
 						<div className="d-flex flex-column flex-md-row justify-content-between align-items-around">
 						  <div className="my-4 col-12 dark">
-							<a className="btn btn-lg btn-primary btn-purple" href="contactUs.html">Contact Us</a>
+							<a className="btn btn-lg btn-primary btn-purple" href="/contact-us">Contact Us</a>
 		
-							<a className="btn btn-lg btn-primary disabled btn-purple btn-disabl" href="getQuote.html">Get Quote</a>
+							<a className="btn btn-lg btn-primary btn-purple" href="/get-quote">Get Quote</a>
 						  </div>
 						</div>
 					  </div>
