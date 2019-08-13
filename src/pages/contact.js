@@ -1,18 +1,26 @@
 import React from 'react';
 import '../assets/css/application.css';
 import {animateBG} from '../assets/js/colorChanger.js';
-
+import InfoForm from '../components/quoteMachine/infoForm.js'
 class Contact extends React.Component {
 
 	constructor(props){
 		super(props);
-		
+		this.state={
+			name: props.name,
+			phone: props.phone,
+			email: props.email,
+			message: props.message
+		}
 	}
 	componentDidMount(){
 		animateBG(".color-change-bg", ["#d8bfd8", "#DDA0DD", "#BA55D3", "#9932CC", "#4B0082", "#9370DB", "#DDA0DD"], 2000)
 		
 
 	}
+	storeInfo(info){
+        this.setState({...info});
+    }
 	render(){
 		return (
 			<article id="contact">
@@ -22,27 +30,8 @@ class Contact extends React.Component {
 									<h1 class="my-4">
 										Your New Project Starts Here
 									</h1>
-									<h4 class="px-4 bold">
-										Contact us to learn more, online quote builder comming soon.
-									</h4>
-									<form class="d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-around">
-										<div class="my-4 col-12 col-md-6">
-											<input class="pl-2" value="Name" id="Name" type="text" />
-										</div>
-										<div class="my-4 col-12 col-md-6">
-											<input class="pl-2" value="Phone" id="Phone" type="phone" />
-										</div>
-										<div class="my-4 col-12">
-											<input class="pl-2" value="Email" id="Email" type="text" />
-										</div>
-										<div class="my-4 col-12">
-											<textarea class="pl-2" placeholder="Message" id="Message"></textarea> 
-										</div>
-										<div class="my-4 pr-md-5 pr-3 d-flex justify-content-end col-12">
-											<a class="btn btn-lg btn-primary btn-purple" href="https://github.com/icarus612/questLandingPage">Contact</a>
-										</div>
-									</form>
-								</div>
+								
+									<InfoForm value={this.state} onChange={this.storeInfo} buttonName='Contact Us' header="Contact us to learn more, online quote builder comming soon."/>								</div>
 							</div>
 		
 				</section>

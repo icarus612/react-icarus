@@ -68,7 +68,7 @@ class QuoteMachine extends React.Component {
 
 
 	render(){
-        let cards = [ <Pages onChange={this.storeInfo} value={this.state.pages}/>, <BasicNeeds value={this.state.basicNeeds} onChange={this.storeInfo} />, <BackEndNeeds value={this.state.backEndNeeds} onChange={this.storeInfo} />, <InfoForm value={this.state.infoForm} onChange={this.storeInfo} />]
+        let cards = [ <Pages onChange={this.storeInfo} value={this.state.pages}/>, <BasicNeeds value={this.state.basicNeeds} onChange={this.storeInfo} />, <BackEndNeeds value={this.state.backEndNeeds} onChange={this.storeInfo} />, <InfoForm value={this.state.infoForm} onChange={this.storeInfo} buttonName='Get Quote' header='Get Your Quote'/>]
 
 		return (
 
