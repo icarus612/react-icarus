@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from'./input.js'
+import Button from './button.js'
 let InfoBox = (props) => {
 	let value = props.value;
 	let  typing = (e) =>{
@@ -48,7 +49,7 @@ let InfoBox = (props) => {
 							<textarea className="pl-2" placeholder="Message" id="message" onChange={typing}>{value.message}</textarea> 
 						</div>
 						<div className="my-4 pr-md-5 pr-3 d-flex justify-content-end col-12">
-							<a className="btn btn-lg btn-primary btn-purple-basic" onClick={props.submitForm}>{props.buttonName}</a>
+						<Button size='lg' simple onClick={props.submitForm}>{props.buttonName}</Button>
 						</div>
 					</div>
 				</form>

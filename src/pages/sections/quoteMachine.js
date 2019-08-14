@@ -1,5 +1,5 @@
 import React from 'react';
-import { InfoForm, Pages, BasicNeeds, BackEndNeeds, PriceBox } from '../components/router.js';
+import { InfoForm, Pages, BasicNeeds, BackEndNeeds, PriceBox, Button } from '../components/router.js';
 
 class QuoteMachine extends React.Component {
 
@@ -75,9 +75,9 @@ class QuoteMachine extends React.Component {
                     </div>
                     {cards[this.state.spot]}
                     <div className="my-4 pr-md-5 pr-3 d-flex justify-content-end col-12">
-                        <button className="btn btn-lg btn-primary btn-purple-basic" onClick={this.prev}>Previous</button>
+                    <Button size='lg' simple onClick={this.prev}>Previous</Button>
+                        <Button size='lg' onClick={this.next}>Next</Button>
 
-                        <button className="btn btn-lg btn-primary btn-purple" onClick={this.next}>Next</button>
                     </div>
                 </div>     
                 <div className="col-12 col-md-4">
