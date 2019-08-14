@@ -194,7 +194,11 @@ import anime from '../anime/lib/anime.es.js';
   }
   
   let fillColor = (e, t, svg) =>{
-    
+    let el = svg.children
+    for (let i = 0; i < svg.children.length; i++){
+      el[i].style.fill = e[0];
+      el[i].style.backgroundColor = e[0];
+    }  
        
         let obj = [
             {
