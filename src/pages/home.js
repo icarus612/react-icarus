@@ -9,7 +9,8 @@ import {animateLI} from '../assets/js/listItem.js';
 import Throbber from './components/throbber.js';
 import Swoosh from './components/swoosh.js';
 import Button from './components/button.js';
-import {Link} from 'react-router-dom';
+import PulseCard from './components/card.js';
+
 class Home extends React.Component {
 
 	constructor(props){
@@ -52,7 +53,7 @@ class Home extends React.Component {
 										</h2>
 										<div className="d-flex flex-column flex-md-row justify-content-between align-items-around">
 											<div className="my-4 col-12 dark">
-												<Button simple size='lg' component={Link} to='/contact-us'>Contact Us</Button>
+												<Button simple size='lg' onClick={""}>Contact Us</Button>
 												<a className="btn btn-lg " href="/get-quote">Get Quote</a>
 											</div>
 										</div>
@@ -106,7 +107,7 @@ class Home extends React.Component {
 									<Swoosh id="mv2" startEl="third" endEl="fourth" />
 
 								</div>
-														<Throbber top id="fourth" mobile="right" />
+								<Throbber top id="fourth" mobile="right" />
 
 							</div>
 							
@@ -139,49 +140,28 @@ class Home extends React.Component {
 																	<div className="throbber mid-throbber">
 																			<div className="throbber-bullets pulse2"></div>
 																	</div>
-																	<div className="col-7 step">
-																		<div className="throbber">
-																				<div className="throbber-bullets pulse3"></div>
-																		</div>
-																		<div>
-																			<h4 className="description">
-																					Speed
-																			</h4>
-		
-																			<p className="description">
-																				Building sits off Google Chrome's node.js runtime allows for sites to be built on the back end and use much more javascript than before. Using frameworks like react sites are built optimal for load speeds, and javascript animations load faster and are more interactive than video's or gif's. 
-																			</p>
-																		</div>
-																	</div>
-		
-																	<div className="col-7 step">
-																		<div className="throbber">
-																				<div className="throbber-bullets pulse4"></div>
-																		</div>
-																		<div>
-																			<h4 className="description">
-																					Debth
-																			</h4>
-		
-																			<p className="description">
-																					Building sites that maxamize the use of functional languages like JavaScript, and not just static HTML and CSS, can lead to more dynamic and interactive sites. This is also how more complex sites, like ecommerce or sites that require user to login's.
-																			</p>
-																		</div>
-																	</div>
-		
-																	<div className="col-7 step">
-																		<div className="throbber">
-																				<div className="throbber-bullets pulse5"></div>
-																		</div>
-																		<div>
-																			<h4 className="description">
-																					Functionality
-																			</h4>
-																			<p className="description">
-																				From the more complex asspects of web development (ie. ecommerce, user login, encryption and databases), to the basic nesesities, like contact forms, carousels, search bars, ect. Javascript is responsible for most if not all of your sites functionality. 
-																			</p>
-																		</div>
-														</div>
+																	<PulseCard 
+																		title="Speed"
+																		description="
+																		Building sits off Google Chrome's node.js runtime allows for sites to be built on the back end and use much more javascript than before. Using frameworks like react sites are built optimal for load speeds, and javascript animations load faster and are more interactive than video's or gif's. 
+																		"
+																		pulsar="throbber-bullets pulse3"
+																	/>
+																	<PulseCard 
+																		title="Depth"
+																		description="
+																		Building sites that maxamize the use of functional languages like JavaScript, and not just static HTML and CSS, can lead to more dynamic and interactive sites. This is also how more complex sites, like ecommerce or sites that require user to login's.
+																		"
+																		pulsar="throbber-bullets pulse4"
+																	/>
+																	<PulseCard 
+																		title="Functionality"
+																		description="
+																		From the more complex asspects of web development (ie. ecommerce, user login, encryption and databases), to the basic nesesities, like contact forms, carousels, search bars, ect. Javascript is responsible for most if not all of your sites functionality. 
+																		"
+																		pulsar="throbber-bullets pulse5"
+																	/>
+
 													</div>
 												</div>
 										</section>		
