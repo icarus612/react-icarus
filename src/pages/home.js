@@ -53,8 +53,8 @@ class Home extends React.Component {
 										</h2>
 										<div className="d-flex flex-column flex-md-row justify-content-between align-items-around">
 											<div className="my-4 col-12 dark">
-												<Button simple size='lg' onClick={""}>Contact Us</Button>
-												<a className="btn btn-lg " href="/get-quote">Get Quote</a>
+												<Button simple size='lg' link="/contact-us">Contact Us</Button>
+												<Button size='lg' link="/get-quote">Get Quote</Button>
 											</div>
 										</div>
 									</div>
@@ -184,9 +184,8 @@ class Home extends React.Component {
 						</h3>
 						<div className="d-flex flex-column flex-md-row justify-content-between align-items-around">
 						  <div className="my-4 col-12 dark">
-							<a className="btn btn-lg btn-primary btn-purple" href="/contact-us">Contact Us</a>
-		
-							<a className="btn btn-lg btn-primary btn-purple" href="/get-quote">Get Quote</a>
+						  		<Button size='lg' link="/contact-us">Contact Us</Button>
+								<Button size='lg' link="/get-quote">Get Quote</Button>
 						  </div>
 						</div>
 					  </div>
