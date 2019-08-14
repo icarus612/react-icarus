@@ -3,20 +3,12 @@ import Throbber from '../components/throbber.js';
 import Swoosh from '../components/swoosh.js';
 import quest from '../../assets/images/quest.png';
 import daedalus from '../../assets/images/daedalus.png';
-import {dotsMovement} from '../../assets/js/dots.js';
 
 export default class HomeMiddle extends React.Component {
     constructor(props){
 		super(props);
 		
 	}
-	componentDidMount(){
-        let dotsRTL = document.getElementById("mv1");
-		let dotsLTR = document.getElementById("mv2");
-
-		dotsMovement(dotsRTL, ["first", "second"], [-6, 360], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
-		dotsMovement(dotsLTR, ["third", "fourth"], [-6, 360], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
-    }
     render(){
         return(
             <section className="overflow-visible">
