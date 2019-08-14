@@ -121,7 +121,7 @@ class Home extends React.Component {
 																<div className="d-flex flex-column flex-sm-row flex-nowrap justify-content-start align-items-stretch" >
 		
 																		<div className='col-2 col-xl-1 image'>
-																				<div className="throbber top-throbber">
+																				<div className="throbber li-throbber-start">
 																						<div className="throbber-inner pulse1"></div>
 																						<div className="animated-dot mv-1"></div>
 																						<div className="animated-dot mv-2"></div>

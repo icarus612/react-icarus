@@ -257,15 +257,20 @@ input:focus, textarea:focus{
   margin-top: 130px;
 }
 
+.li-throbber-start {
+  top: 50%;
+  left: 68px;
+}
+.li-throbber-start .throbber-inner {
+  box-shadow: 0 0 0 2px rgba(175, 70, 211, .7);
+
+}
+
 .first-throbber {
     top: 50%;
     right: 9px;
 }
 
-.top-throbber {
-    top: 50%;
-    left: 68px;
-}
 .second-throbber {
     top: 50%;
     right: 8px !important;
