@@ -13,7 +13,14 @@ export default class Swoosh extends React.Component {
     }
     where(){
         let move = document.getElementById(this.props.id);
-		dotsMovement(move, [this.props.startEl, this.props.startEl], [this.props.endEl, this.props.endEl], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
+		dotsMovement({
+            target: move, 
+            start: this.props.startEl, 
+            end: this.props.endEl, 
+            time: 1000, 
+            curve: "cubicX", 
+            color: ["#009de4", "#06f3a0", "#f30659"],
+        });
 
     }
 	componentDidMount(){

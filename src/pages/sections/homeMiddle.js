@@ -17,7 +17,7 @@ export default class HomeMiddle extends React.Component {
 									<div className="col-12">	
 										<Throbber bottom id="first" mobile="right" />
 									</div>
-									<Swoosh id="mv1" startEl="first" endEl="second" />
+									<Swoosh id="mv1" startEl="#first" endEl="#second" />
 									<div className="col-12 col-md-8 col-lg-6">
 										<Throbber top id="second" mobile="left" />
 										<div className="purple-gradient d-flex flex-column p-5 text-left overflow-visible">
@@ -53,7 +53,7 @@ export default class HomeMiddle extends React.Component {
 											</a>
 										</div>
 									</div>
-									<Swoosh id="mv2" startEl="third" endEl="fourth" />
+									<Swoosh id="mv2" startEl="#third" endEl="#fourth" />
 
 								</div>
 								<Throbber top id="fourth" mobile="right" />
