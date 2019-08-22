@@ -9,7 +9,7 @@ const Button = (props) =>{
         props.link ? window.open(props.link, '_self') : props.onClick(e);
     }
     return (
-        <button onClick={onClick} className={classes.join(' ')} >{props.children}</button>
+        <button type={props.type} onClick={onClick} className={classes.join(' ')} >{props.children}</button>
     )
 }
 export default Button;

@@ -135,7 +135,6 @@ code {
   box-shadow: 0 0 0 2px #02A9F7;
   z-index: 3000;
 }
-
 .throbber-bottom {
   bottom: 7px;
   left: 50%;
@@ -148,6 +147,14 @@ code {
   border-radius: 100%;
   box-shadow: 0 0 0 2px #02A9F7;
   z-index: 3000;
+}
+.throbber-top.mobile-left, .throbber-bottom.mobile-left{
+  left: 10%;
+  right: unset;
+}
+.throbber-top.mobile-right, .throbber-bottom.mobile-right{
+  right: 10%;
+  left: unset;
 }
 .throbber-inner {
   content: "";
@@ -162,8 +169,21 @@ code {
   background: hsla(60%,0%,40%,.4);
   border-radius: 100%;
   box-shadow: 0 0 0 2px #02A9F7;
-  }
-
+}
+.step .throbber-top {
+  position: absolute;
+  top: -7px;
+}
+.step .throbber-bottom {
+  position: absolute;
+  bottom: -7px;
+}
+.step.mobile {
+  border: 1px solid rgb(175, 70, 211);
+  border-left: unset;
+  border-right: unset;
+  margin: 80px 0;
+}
 #contactMe{
   height: 500px;
   background: url('../images/bg11.png');
@@ -260,6 +280,11 @@ input:focus, textarea:focus{
 .li-throbber-start {
   top: 50%;
   left: 68px;
+}
+.li-throbber-start.mobile {
+  top: 5%;
+  left: 50%;
+  margin-left: -7px;
 }
 .li-throbber-start .throbber-inner {
   box-shadow: 0 0 0 2px rgba(175, 70, 211, .7);

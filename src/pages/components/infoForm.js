@@ -9,50 +9,49 @@ let InfoBox = (props) => {
          inner = e.target.value;
         newSet[id] = inner;
         props.update({...newSet}, "infoForm");    
-    }
+	}
+	
 		return (
-				
-				<form className="d-flex flex-column flex-wrap flex-column justify-content-center align-items-around">
-					<h3>
-						{props.header}
-					</h3>
-					<div className='d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-around'>
-
-						<div className="my-4 col-12 col-md-6">
-							<Input 
-								id='name'
-								value={value.name}
-								placeholder=' Name'
-								type='text'
-								onChange={typing}
-							/>		
-						</div>
-						<div className="my-4 col-12 col-md-6">
-							<Input 
-								id='phone'
-								value={value.phone}
-								placeholder=' Phone'
-								type='phone'
-								onChange={typing}
-							/>
-						</div>
-						<div className="my-4 col-12">
-							<Input 
-								id='email'
-								value={value.email}
-								placeholder=' Email'
-								type='text'
-								onChange={typing}
-							/>
-						</div>
-						<div className="my-4 col-12">
-							<textarea className="pl-2" placeholder="Message" id="message" onChange={typing}>{value.message}</textarea> 
-						</div>
-						<div className="my-4 pr-md-5 pr-3 d-flex justify-content-end col-12">
+			<div>
+				<h3>
+					{props.header}
+				</h3>
+				<form className="d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-around">
+					<div className="my-4 col-12 col-md-6">
+						<Input 
+							id='name'
+							value={value.name}
+							placeholder=' Name'
+							type='text'
+							onChange={typing}
+						/>		
+					</div>
+					<div className="my-4 col-12 col-md-6">
+						<Input 
+							id='phone'
+							value={value.phone}
+							placeholder=' Phone'
+							type='phone'
+							onChange={typing}
+						/>
+					</div>
+					<div className="my-4 col-12">
+						<Input 
+							id='email'
+							value={value.email}
+							placeholder=' Email'
+							type='text'
+							onChange={typing}
+						/>
+					</div>
+					<div className="my-4 col-12">
+						<textarea className="pl-2" placeholder="Message" id="message" onChange={typing}>{value.message}</textarea> 
+					</div>
+					<div className="my-4 pr-md-5 pr-3 d-flex justify-content-end col-12">
 						<Button size='lg' simple onClick={props.submitForm}>{props.buttonName}</Button>
-						</div>
 					</div>
 				</form>
+			</div>
 			
 		)
 	

@@ -222,7 +222,6 @@ let fillColor = (e, t, svg) =>{
   
 }
 let whereTarget = (po, el) => {
-  console.log(po, el)
   let start = document.querySelector(po).getBoundingClientRect()
   let element = el.getBoundingClientRect()
   let x = ((start.left + start.right)/2 - (element.left+element.right)/2);
@@ -254,7 +253,6 @@ export let dotsMovement = (params) => {
   }
   //mobile functions for distance
   let loopThrough = (e) => {
-    console.log(typeof params.start)
     for (let i = 0; i < e.children.length; i++){
       let distX = [];
       let distY = [];

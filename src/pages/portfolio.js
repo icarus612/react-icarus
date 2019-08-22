@@ -7,14 +7,12 @@ import HomeMiddle from './sections/homeMiddle.js'
 import AnimatedList from './sections/animatedList.js'
 import HowItWorks from './sections/howItWorks.js'
 import HomeContact from './sections/homeContact.js'
-import AnimatedListMobile from './sections/animatedListMobile.js'
 
-class Home extends React.Component {
+class Portfolio extends React.Component {
 
 	constructor(props){
 		super(props);
-		this.dotslist = window.innerWidth > 700 ? <AnimatedList /> : <AnimatedListMobile />;
-
+		
 	}
 	componentDidMount(){
 		anime({
@@ -27,12 +25,7 @@ class Home extends React.Component {
 			duration: 1500,
 		})
 		scrollBG(".color-change-bg", ["#9932CC", "#4B0082", "#9370DB", "#8068D8"], 3000)
-		window.addEventListener('resize', ()=>{
-			this.dotslist = window.innerWidth > 700 ? <AnimatedList /> : <AnimatedListMobile />;
-			console.log(this.dotslist)
-		})
 	}
-	
 	render(){
 		return (
 			<article id="home" className="overflow-hidden">
@@ -40,7 +33,7 @@ class Home extends React.Component {
 					<HomeHeader />
 					<HomeMiddle />
 				</div>			
-				{this.dotslist}	
+				<AnimatedList />		
 				<HowItWorks />			
 				<HomeContact />
 			</article>
@@ -49,4 +42,4 @@ class Home extends React.Component {
   
 }
 
-export default Home;
+export default Portfolio;
