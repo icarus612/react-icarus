@@ -375,3 +375,16 @@ input:focus, textarea:focus{
     position: relative;
 }
 
+nav{
+  height: fit-content;
+  padding: 12px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: #CA7EDD;
+  color: #fff;
+}
+nav a {
+  color: #fff;
+}
