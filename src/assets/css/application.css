@@ -378,13 +378,17 @@ input:focus, textarea:focus{
 nav{
   height: fit-content;
   padding: 12px;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-  background-color: #CA7EDD;
+  background-color: rgba(80, 8, 136, .9);
   color: #fff;
 }
 nav a {
   color: #fff;
+}
+nav a:hover{
+  color: #D392E3;
+  text-decoration: none;
 }
