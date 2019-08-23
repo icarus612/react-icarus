@@ -1,6 +1,6 @@
 import React from 'react';
 import {PulseCardMobile} from '../components/card.js';
-import {animateLI} from '../../assets/js/listItem.js';
+import {animateLIMobile} from '../../assets/js/listItemMobile.js';
 
 export default class AnimatedListMobile extends React.Component {
 
@@ -20,8 +20,6 @@ export default class AnimatedListMobile extends React.Component {
                                         <div className='col-12'>
                                                 <div className="throbber li-throbber-start mobile">
                                                         <div className="throbber-inner pulse1"></div>
-                                                        <div className="animated-dot mv-1"></div>
-                                                        <div className="animated-dot mv-3"></div>
                                                 </div>
                                         </div>
                                 </div>
@@ -36,7 +34,7 @@ export default class AnimatedListMobile extends React.Component {
                                         pulsar="throbber-bullets pulse3"
                                         mobile='left'
                                     />
-                                                                                            <div className="animated-dot mv-2"></div>
+                                    <div className="animated-dot mv-1"></div>
 
                                     <PulseCardMobile 
                                         title="Depth"
@@ -46,6 +44,7 @@ export default class AnimatedListMobile extends React.Component {
                                         pulsar="throbber-bullets pulse4"
                                         mobile='right'
                                     />
+                                    <div className="animated-dot mv-2"></div>
                                     <PulseCardMobile 
                                         title="Functionality"
                                         description="
@@ -54,6 +53,8 @@ export default class AnimatedListMobile extends React.Component {
                                         pulsar="throbber-bullets pulse5"
                                         mobile='left'
                                     />
+                                    <div className="animated-dot mv-3"></div>
+
 
                 </div>
             </section>	

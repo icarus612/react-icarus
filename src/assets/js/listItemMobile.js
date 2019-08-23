@@ -1,6 +1,6 @@
 import anime from '../anime/lib/anime.es.js';
 
-export let animateLI = () =>{
+export let animateLIMobile = () =>{
   let top = document.querySelector(".li-throbber-start").getBoundingClientRect(),
       start = document.querySelector(".mid-throbber").getBoundingClientRect(),
       end1 = document.querySelector(".pulse3").getBoundingClientRect(),
@@ -13,7 +13,7 @@ export let animateLI = () =>{
         easing: "easeInOutCubic",
         complete: function(anim) {
             try {
-                return animateLI()
+                animateLIMobile()
             } catch (err) {
                 console.error(err);
             }     

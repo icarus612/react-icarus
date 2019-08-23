@@ -28,7 +28,7 @@ class Portfolio extends React.Component {
 	}
 	render(){
 		return (
-			<article id="home" className="overflow-hidden">
+			<article id="portfolio" className="overflow-hidden">
 				<div  className="color-change-bg">
 					<HomeHeader />
 					<HomeMiddle />

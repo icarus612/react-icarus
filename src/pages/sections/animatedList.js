@@ -3,9 +3,14 @@ import {PulseCard} from '../components/card.js';
 import {animateLI} from '../../assets/js/listItem.js';
 
 export default class AnimatedList extends React.Component {
+    constructor(props){
+        super(props);
+    }
     componentDidMount(){
         animateLI()
+
     }
+   
     render(){
         return (
             <section className="background-dotsLI px-5 flex-nowrap d-flex flex-column pb-5 text-left overflow-visible"  id="list-dot-outer">

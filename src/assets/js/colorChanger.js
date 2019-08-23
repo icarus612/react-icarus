@@ -38,7 +38,9 @@ export var scrollBG = (el, colors, t) => {
         for (let i = 0; i < animation.length; i++){
             animation[i].seek((window.scrollY / t) * animation[i].duration);
         }
-        return animation[x].seek((window.scrollY / t) * animation[animation.length-1].duration);
+        try {
+            animation[x].seek((window.scrollY / t) * animation[animation.length-1].duration);
+        } catch (err) { console.error(err)}
     };
     return animation[0].seek(1)
  

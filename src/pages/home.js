@@ -13,8 +13,9 @@ class Home extends React.Component {
 
 	constructor(props){
 		super(props);
-		this.dotslist = window.innerWidth > 700 ? <AnimatedList /> : <AnimatedListMobile />;
-
+		this.state ={
+			dotslist: (window.innerWidth > 700 ? <AnimatedList /> : <AnimatedListMobile />)
+		}
 	}
 	componentDidMount(){
 		anime({
@@ -28,19 +29,19 @@ class Home extends React.Component {
 		})
 		scrollBG(".color-change-bg", ["#9932CC", "#4B0082", "#9370DB", "#8068D8"], 3000)
 		window.addEventListener('resize', ()=>{
-			this.dotslist = window.innerWidth > 700 ? <AnimatedList /> : <AnimatedListMobile />;
-			console.log(this.dotslist)
+			this.setState({dotslist: (window.innerWidth > 700 ? <AnimatedList /> : <AnimatedListMobile />)});
 		})
 	}
 	
 	render(){
+		
 		return (
 			<article id="home" className="overflow-hidden">
 				<div  className="color-change-bg">
 					<HomeHeader />
 					<HomeMiddle />
 				</div>			
-				{this.dotslist}	
+				{this.state.dotslist}	
 				<HowItWorks />			
 				<HomeContact />
 			</article>

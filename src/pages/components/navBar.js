@@ -2,53 +2,29 @@ import React from 'react';
 import IndexRoutes from '../../routes.js';
 
 let NavBar = (props)=> {
+    let toggle = ()=> {
+        let linksEl = document.querySelector('.narrowLinks');
+        if (linksEl.style.display === 'block') {
+                  linksEl.style.display = 'none';
+              } else {
+                  linksEl.style.display = 'block';
+              }
+    }
     return (
-        <nav className="navbar navbar-default">
-            <div className="container-fluid">
-                <div className="navbar-header">
-                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                </button>
-                <a className="navbar-brand" href="#">Brand</a>
+        <navbar>
+            <nav>
+            <div className="d-flex flex-row justify-content-end align-items-center">
+                    <div className="d-flex flex-row justify-content-around align-items-center col-8 col-md-6 col-lg-4">
+                        <a href="/">Home</a>
+                        <a href="/about">About Us</a>
+                        <a href="/portfolio">Portfolio</a>
+                        <a href="/contact-us">Contact Us</a>
+                        <a href="/get-quote">Get Quote</a>
+                    </div>
                 </div>
-
-                <div className="collapse navbar-collapse">
-                <ul className="nav navbar-nav">
-                    <li className="active"><a href="#">Link <span className="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li className="dropdown">
-                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
-                    <ul className="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" className="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" className="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                    </li>
-                </ul>
-    
-                <ul className="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li className="dropdown">
-                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
-                    <ul className="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" className="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </navbar>
+       
     )
 }
 export default NavBar;
