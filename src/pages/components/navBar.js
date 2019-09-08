@@ -16,7 +16,7 @@ let NavBar = (props)=> {
                 <div className="d-flex flex-row justify-content-around align-items-center col-8 col-md-6 col-lg-4">
                     <a href="/">Home</a>
                     <a href="/about">About Us</a>
-                    <a href="/portfolio">Portfolio</a>
+                    <a href="/projects-and-portfolio">Portfolio</a>
                     <a href="/contact-us">Contact Us</a>
                     <a href="/get-quote">Get Quote</a>
                 </div>
