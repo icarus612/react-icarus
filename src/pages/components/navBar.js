@@ -17,6 +17,7 @@ let NavBar = (props)=> {
                     <a href="/">Home</a>
                     <a href="/about">About Us</a>
                     <a href="/projects-and-portfolio">Portfolio</a>
+                    <a href="/contact-us">Contact Us</a>
                     <a href="/get-quote">Get Quote</a>
                     <a href="/contact-us">Contact Us</a>
                 </div>
