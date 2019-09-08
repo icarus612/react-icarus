@@ -54,6 +54,20 @@ code {
   width: 100%;
 }
 
+.portfolio-card{
+  box-shadow: 2px 1px 15px -1px rgba(150,150,150,.5);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+  transition: .1s;
+  overflow: hidden;
+}
+.portfolio-img-cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 .price-card {
   border: none;
   border-radius: 6px;
@@ -67,7 +81,7 @@ code {
 }
 .card .image {
   width: 100%;
-  height: length;
+  height: 100%;
 
 }
 .text-blue {
@@ -94,7 +108,7 @@ code {
   box-shadow: 2px 3px 25px -3px rgba(50, 50, 50, 0.5);
   border-radius: 8px;
   color: #f1f1f1;
-  background-image: linear-gradient(to bottom right, rgba(175, 70, 211, .5), rgba(147, 112, 219, .5)) !important;
+  background-image: linear-gradient(to bottom right, rgba(175, 70, 211, .9), rgba(147, 112, 219, .9)) !important;
 }
 #mv1, #mv2, #mv3 {
   width: 100%;
@@ -290,7 +304,14 @@ input:focus, textarea:focus{
   box-shadow: 0 0 0 2px rgba(175, 70, 211, .7);
 
 }
+.crazy-container{
+  margin-top: -200px;
+  transform: skewY(20deg)
 
+}
+.color-change-bg{
+  transform: skewY(-20deg) translateY(-5vw)
+}
 .first-throbber {
     top: 50%;
     right: 9px;
@@ -324,8 +345,9 @@ input:focus, textarea:focus{
   background-image: url("../images/header-bg.jpg");
   background-position: 25%;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 30vh;
   opacity: .8
+
 }
 
 .top-rounded{
@@ -355,7 +377,6 @@ input:focus, textarea:focus{
     position: absolute;
     left: 0;
     opacity: 0;
-    z-index: -1
 
 }
 .animated-dot2 {
@@ -366,7 +387,6 @@ input:focus, textarea:focus{
     position: absolute;
     left: 2px;
     top: 2px;
-    z-index: -1
 }
 
 
@@ -389,6 +409,39 @@ nav a {
   color: #fff;
 }
 nav a:hover{
-  color: #D392E3;
+  color: #D392E3 !important;
   text-decoration: none;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(150,150,150,.5);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  min-height: fit-content;
+
+}
+.modal > div {
+  width: 100%;
+  height: 100%;
+}
+.modal img {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+.modal-overlay{
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  position: relative;
+}
+.modal #modal-txt {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: #fff;
 }

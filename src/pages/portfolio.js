@@ -1,13 +1,9 @@
 import React from 'react';
 import '../assets/css/application.css';
 import {scrollBG} from '../assets/js/colorChanger.js';
-import anime from '../assets/anime/lib/anime.es.js';
-import HomeHeader from './sections/homeHeader.js'
-import HomeMiddle from './sections/homeMiddle.js'
-import AnimatedList from './sections/animatedList.js'
-import HowItWorks from './sections/howItWorks.js'
-import HomeContact from './sections/homeContact.js'
-
+import {PortfolioCard} from './components/card.js';
+import quest from '../assets/images/quest.png';
+import daedalus from '../assets/images/daedalus.png';
 class Portfolio extends React.Component {
 
 	constructor(props){
@@ -15,30 +11,39 @@ class Portfolio extends React.Component {
 		
 	}
 	componentDidMount(){
-		anime({
-			targets: ".throbber-inner",
-			scale: .5,
-			border: "2px",
-			easing: "easeInCubic",
-			direction: "alternate",
-			loop: true,
-			duration: 1500,
-		})
+
 		scrollBG(".color-change-bg", ["#9932CC", "#4B0082", "#9370DB", "#8068D8"], 3000)
 	}
 	render(){
 		return (
-			<article id="portfolio" className="overflow-hidden">
-				<div  className="color-change-bg">
-					<HomeHeader />
-					<HomeMiddle />
-				</div>			
-				<AnimatedList />		
-				<HowItWorks />			
-				<HomeContact />
-			</article>
+			<section id="portfolio" className="container overflow-hidden">
+				<div className="flex-wrap d-flex flex-row justify-content-center align-items-center" >
+					<PortfolioCard image={quest} >
+						<h2>
+							Quest Theme
+						</h2>
+						<h4>
+							By: Project Icarus
+						</h4>
+						<p>
+							Words
+						</p>
+					</PortfolioCard>
+					<PortfolioCard image={daedalus}>
+						<h2>
+							Daedalus Landing Page
+						</h2>
+						<h4>
+							By: Project Icarus
+						</h4>
+						<p>
+							Words
+						</p>
+					</PortfolioCard>
+				</ div>
+			</section>
 		);
-	}
+	} 
   
 }
 
