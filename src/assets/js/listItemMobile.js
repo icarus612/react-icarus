@@ -1,14 +1,16 @@
 import anime from '../anime/lib/anime.es.js';
 
 export let animateLIMobile = () =>{
-  let top = document.querySelector(".li-throbber-start").getBoundingClientRect(),
-      start = document.querySelector(".mid-throbber").getBoundingClientRect(),
-      end1 = document.querySelector(".pulse3").getBoundingClientRect(),
-      end2= document.querySelector(".pulse4").getBoundingClientRect(),
-      end3 = document.querySelector(".pulse5").getBoundingClientRect(),
-      endY = (s, e, p=0) =>  (e.top + e.bottom)/2 - (s.top + s.bottom)/2 +p,
-      endX = (s, e, p=0) =>  (e.left + e.right)/2 - (s.left + s.right)/2 +p,
-      steps = [];
+    let section = document.getElementById("list-dot-outer"),
+        start1 = section.querySelector(".li-throbber-start").getBoundingClientRect(),
+        end1 = section.querySelectorAll(".throbber-top")[0].querySelector(".pulse3").getBoundingClientRect(),
+        start2 = section.querySelectorAll(".throbber-bottom")[0].querySelector(".pulse3").getBoundingClientRect(),
+        end2= section.querySelectorAll(".throbber-top")[1].querySelector(".pulse4").getBoundingClientRect(),
+        start3 = section.querySelectorAll(".throbber-bottom")[1].querySelector(".pulse4").getBoundingClientRect(),
+        end3 = section.querySelectorAll(".throbber-top")[2].querySelector(".pulse5").getBoundingClientRect(),
+        moveY = (s, e, p=0) =>  (e.top + e.bottom)/2 - (s == 0 ? 0 : (s.top + s.bottom))/2 +p,
+        moveX = (s, e, p=0) =>  (e.left + e.right)/2 - (s == 0 ? 0 : (s.left + s.right))/2 +p,
+        steps = [];
     let animation = anime.timeline({
         easing: "easeInOutCubic",
         complete: function(anim) {
@@ -19,9 +21,9 @@ export let animateLIMobile = () =>{
             }     
         }
     }).add({
-        targets: ".animated-dot",
-        translateY: [0, endY(top, start)],
-        translateX: [2, 2],
+        targets: ".mv-4",
+        translateY: [moveY(start1, 0), moveY(start1, end1)],
+        translateX: [moveX(start1, 0), moveY(start1, end1)],
         duration: 1000,
         easing: "easeOutCubic",
     }, 887).add({
@@ -34,8 +36,8 @@ export let animateLIMobile = () =>{
       duration: 1000,
     }).add({
         targets: ".mv-1",
-        translateX: [0, endX(start, end1)],
-        translateY: [endY(top, start), endY(top, end1)],
+        translateX: [moveX(start2, 0), moveX(start2, end2)],
+        translateY: [moveY(start2, 0), moveY(start2, end2)],
         duration: 600,
         easing: "easeOutCubic"
     }).add({
@@ -54,12 +56,12 @@ export let animateLIMobile = () =>{
     }).add({
         targets: ".mv-3",
         translateY: [
-            {value: [endY(top, start),  endY(top, end1, -20)]},
-            {value: [endY(top, end1, -20),  endY(top, end3, 20)]},
-            {value: [endY(top, end3, 20),  endY(top, end2)]}
+            {value: [moveY(0, start2),  moveY(0, end2, -20)]},
+            {value: [moveY(0, end2, -20),  moveY(0, end2, 20)]},
+            {value: [moveY(0, end2, 20),  moveY(0, end2)]}
         ],
         translateX: {
-            value: [0,  endX(start, end2)],
+            value: [0,  moveX(start1, end2)],
             easing: "linear",
         },
         duration: 1300,
@@ -81,29 +83,29 @@ export let animateLIMobile = () =>{
         targets: ".mv-2",
         translateX: [
             {
-                value: [0, endX(start, end3)/3],
+                value: [0, moveX(start3, end3)/3],
                 duration: 500,
                 easing: "linear"
             },
             {
-                value: [endX(start, end3)],
+                value: [moveX(start3, end3)],
                 duration: 910,
                 easing: "linear"
             },
         ],
         translateY: [
             {
-                value: [endY(top, start), endY(top, end3)],
+                value: [moveY(0, start3), moveY(0, end3)],
                 duration: 500,
                 easing: "easeInQuad"
             },
             {
-                value: [endY(top, end3), endY(top, start)],
+                value: [moveY(0, end3), moveY(0, start3)],
                 duration: 450,
                 easing: "easeOutCirc"
             },
             {
-                value: [endY(top, start), endY(top, end3)],
+                value: [moveY(0, start3), moveY(0, end3)],
                 duration: 450,
                 easing: "easeInCirc"
             },

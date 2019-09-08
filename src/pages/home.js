@@ -37,10 +37,8 @@ class Home extends React.Component {
 		
 		return (
 			<article id="home" className="overflow-hidden">
-				<div  className="color-change-bg">
-					<HomeHeader />
-					<HomeMiddle />
-				</div>			
+				<HomeHeader />
+				<HomeMiddle />
 				{this.state.dotslist}	
 				<HowItWorks />			
 				<HomeContact />
