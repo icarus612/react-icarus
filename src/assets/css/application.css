@@ -309,7 +309,7 @@ input:focus, textarea:focus{
   transform: skewY(20deg)
 
 }
-.color-change-bg{
+.crazy-container .color-change-bg{
   transform: skewY(-20deg) translateY(-5vw)
 }
 .first-throbber {
